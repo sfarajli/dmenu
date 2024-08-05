@@ -417,10 +417,30 @@ keypress(XKeyEvent *ev)
 			goto draw;
 		case XK_g: ksym = XK_Home;  break;
 		case XK_G: ksym = XK_End;   break;
-		case XK_h: ksym = XK_Up;    break;
-		case XK_j: ksym = XK_Next;  break;
-		case XK_k: ksym = XK_Prior; break;
-		case XK_l: ksym = XK_Down;  break;
+		case XK_h:
+			if(lines > 0)
+				ksym = XK_Prior;
+			else
+				ksym = XK_Up;
+			break;
+		case XK_j:
+			if(lines > 0)
+				ksym = XK_Down;
+			else
+				ksym = XK_Next;
+			break;
+		case XK_k:
+			if(lines > 0)
+				ksym = XK_Up;
+			else
+				ksym = XK_Prior;
+			break;
+		case XK_l:
+			if(lines > 0)
+				ksym = XK_Next;
+			else
+				ksym = XK_Down;
+			break;
 		default:
 			return;
 		}
