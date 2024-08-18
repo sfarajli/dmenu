@@ -2,7 +2,7 @@
 VERSION = 5.3
 
 # paths
-PREFIX = /usr/local
+PREFIX ?= /usr/local
 MANPREFIX = $(PREFIX)/share/man
 
 X11INC = /usr/X11R6/include
@@ -72,5 +72,5 @@ uninstall:
 .PHONY: all clean dist install uninstall
 
 dmenu.o: src/drw.h src/util.h src/config.h
-drw.o: src/drw.h src/util.h 
+drw.o: src/drw.h src/util.h
 util.o: src/util.h
