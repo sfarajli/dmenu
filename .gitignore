@@ -1,3 +1,4 @@
+*.o
 TODO
 config.def.h
-*.o
+install.mk
