@@ -3,9 +3,11 @@
 dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bfiv ]
+.RB [ \-bfivc ]
 .RB [ \-l
 .IR lines ]
+.RB [ \-g
+.IR grids ]
 .RB [ \-m
 .IR monitor ]
 .RB [ \-p
@@ -20,6 +22,8 @@ dmenu \- dynamic menu
 .IR color ]
 .RB [ \-sf
 .IR color ]
+.RB [ \-bw
+.IR border]
 .RB [ \-w
 .IR windowid ]
 .P
@@ -47,8 +51,14 @@ is faster, but will lock up X until stdin reaches end\-of\-file.
 .B \-i
 dmenu matches menu items case insensitively.
 .TP
+.B \-c
+center dmenu on the screen.
+.TP
 .BI \-l " lines"
 dmenu lists items vertically, with the given number of lines.
+.TP
+.BI \-g " grids"
+use given number of grids.
 .TP
 .BI \-m " monitor"
 dmenu is displayed on the monitor number supplied. Monitor numbers are starting
@@ -166,29 +176,34 @@ Paste from primary X selection
 .B C\-Y
 Paste from X clipboard
 .TP
-.B M\-b
+.B alt\-b
 Move cursor to the start of the current word
 .TP
-.B M\-f
+.B alt\-f
 Move cursor to the end of the current word
 .TP
-.B M\-g
+.B alt\-g
 Home
 .TP
-.B M\-G
+.B alt\-G
 End
 .TP
-.B M\-h
-Up
+.B alt\-h
+Multiple grids -> Page up,
+Single grid -> Up.
 .TP
-.B M\-j
-Page down
+.B alt\-j
+Multiple grids -> down,
+Single grid -> Page down.
 .TP
-.B M\-k
-Page up
+.B alt\-k
+Multiple grids -> up,
+Single grid -> Page up.
 .TP
-.B M\-l
-Down
+.B alt\-l
+Multiple grids -> Page down,
+Single grid -> down.
+
 .SH SEE ALSO
 .IR dwm (1),
 .IR stest (1)
