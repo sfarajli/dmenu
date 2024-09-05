@@ -1,0 +1,22 @@
+dmenu - dynamic menu
+====================
+Dynamic menu for X,
+Forked from git.suckless.org/dmenu
+
+
+Installing dmenu
+----------------
+Simply run
+make install
+
+
+Keybinds
+--------
+Refer to the man page.
+
+
+Added Patches
+-------------
+- https://tools.suckless.org/dmenu/patches/grid
+- https://tools.suckless.org/dmenu/patches/center
+- https://tools.suckless.org/dmenu/patches/border
