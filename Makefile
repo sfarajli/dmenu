@@ -23,16 +23,14 @@ stest: stest.o
 	$(CC) -o $@ stest.o $(LDFLAGS)
 
 clean:
-	rm -f dmenu stest $(OBJ) dmenu-$(VERSION).tar.gz
+	rm -f dmenu stest $(OBJ) dmenu.tar.gz
 
 dist: clean
-	mkdir -p dmenu-$(VERSION)
-	cp LICENSE Makefile README arg.h config.def.h config.mk dmenu.1\
-		drw.h util.h dmenu_path dmenu_run stest.1 $(SRC)\
-		dmenu-$(VERSION)
-	tar -cf dmenu-$(VERSION).tar dmenu-$(VERSION)
-	gzip dmenu-$(VERSION).tar
-	rm -rf dmenu-$(VERSION)
+	mkdir -p dmenu
+	cp Makefile arg.h config.h config.mk dmenu.1\
+		drw.h util.h dmenu_path dmenu_run stest.1 $(SRC) dmenu
+	tar -czf dmenu.tar.gz dmenu
+	rm -rf dmenu
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
