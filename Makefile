@@ -26,7 +26,7 @@ dist: clean
 	mkdir -p dmenu
 	cp Makefile arg.h config.h config.mk dmenu.1\
 		drw.h util.h dmenu_path dmenu_run stest.1 $(SRC) dmenu
-	tar -czf dmenu.tar.gz dmenu
+	tar -czf dmenu-farajli.tar.gz dmenu
 	rm -rf dmenu
 
 install: all
