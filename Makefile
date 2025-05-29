@@ -20,14 +20,14 @@ stest: stest.o
 	$(CC) -o $@ stest.o $(LDFLAGS)
 
 clean:
-	rm -f dmenu stest $(OBJ) dmenu-farajli-$(VERSION).tar.gz
+	rm -f dmenu stest $(OBJ) dmenu_farajli-$(VERSION).tar.gz
 
 dist: clean
-	mkdir -p dmenu-farajli-$(VERSION)
+	mkdir -p dmenu_farajli-$(VERSION)
 	cp Makefile arg.h config.h config.mk dmenu.1\
-		drw.h util.h dmenu_path dmenu_run stest.1 $(SRC) dmenu-farajli-$(VERSION)
-	tar -czf dmenu-farajli-$(VERSION).tar.gz dmenu-farajli-$(VERSION)
-	rm -rf dmenu-farajli-$(VERSION)
+		drw.h util.h dmenu_path dmenu_run stest.1 $(SRC) dmenu_farajli-$(VERSION)
+	tar -czf dmenu_farajli-$(VERSION).tar.gz dmenu_farajli-$(VERSION)
+	rm -rf dmenu_farajli-$(VERSION)
 
 install: all
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
