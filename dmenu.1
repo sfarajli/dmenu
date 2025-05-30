@@ -7,7 +7,7 @@ dmenu \- dynamic menu
 .RB [ \-l
 .IR lines ]
 .RB [ \-g
-.IR grids ]
+.IR columns]
 .RB [ \-m
 .IR monitor ]
 .RB [ \-p
@@ -51,14 +51,17 @@ is faster, but will lock up X until stdin reaches end\-of\-file.
 .B \-i
 dmenu matches menu items case insensitively.
 .TP
+.B \-v
+prints version information to stdout, then exits.
+.TP
 .B \-c
 center dmenu on the screen.
 .TP
 .BI \-l " lines"
 dmenu lists items vertically, with the given number of lines.
 .TP
-.BI \-g " grids"
-use given number of grids.
+.BI \-g " columns"
+list items in a grid format, with the given number of columns.
 .TP
 .BI \-m " monitor"
 dmenu is displayed on the monitor number supplied. Monitor numbers are starting
@@ -85,8 +88,8 @@ defines the selected background color.
 .BI \-sf " color"
 defines the selected foreground color.
 .TP
-.B \-v
-prints version information to stdout, then exits.
+.BI \-bw " border"
+defines the border width.
 .TP
 .BI \-w " windowid"
 embed into windowid.
@@ -189,20 +192,20 @@ Home
 End
 .TP
 .B alt\-h
-Multiple grids -> Page up,
-Single grid -> Up.
+Multiple columns -> Page up,
+Single column -> Up.
 .TP
 .B alt\-j
-Multiple grids -> Down,
-Single grid -> Page down.
+Multiple columns -> Down,
+Single column -> Page down.
 .TP
 .B alt\-k
-Multiple grids -> Up,
-Single grid -> Page up.
+Multiple columns -> Up,
+Single column -> Page up.
 .TP
 .B alt\-l
-Multiple grids -> Page down,
-Single grid -> Down.
+Multiple columns -> Page down,
+Single column -> Down.
 
 .SH SEE ALSO
 .IR dwm (1),
